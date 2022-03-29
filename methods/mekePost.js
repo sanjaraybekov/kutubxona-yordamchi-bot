@@ -1,6 +1,14 @@
+const { getReadingBooks } = require("./getReadingBooks");
+
 const makePost = (book) => {
   let stocks = book.stocks;
-
+  //   const someBusy = book?.stocks?.some((busy) => busy.busy === true);
+  //   let busyBooks = [];
+  //   if (someBusy) {
+  //     await getReadingBooks(book.id).then((res) => {
+  //       busyBooks = res?.data;
+  //     });
+  //   }
   //   function groupBy(list, keyGetter) {
   //     const map = {};
   //     list.forEach((item) => {
@@ -20,7 +28,7 @@ const makePost = (book) => {
   //       groupBy(busyBooks, (item) => item.returningDate.slice(0, 10))
   //     );
   //   }
-
+  //   console.log(...groupedByDate);
   return `\nKitob nomi: ${book.name}\nUmumiy kitoblar soni: ${
     stocks.length
   } ta\nKitob holati: ${
