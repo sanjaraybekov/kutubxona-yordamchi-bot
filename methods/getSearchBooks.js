@@ -1,5 +1,5 @@
 const { default: axios } = require("axios");
-const { URL_LIBRARY_API } = require("../constants/const");
+const { URL_LIBRARY_API, bot } = require("../constants/const");
 const { makePost } = require("./mekePost");
 
 const getSearchBooks = async (ctx) => {
@@ -11,7 +11,8 @@ const getSearchBooks = async (ctx) => {
     result = res.data.items;
   });
 
-  return ctx.reply(
+  return bot.telegram.sendMessage(
+    -1001718670724,
     `🔍 Qidiruv natijasi\n${result.map((item) => makePost(item))}`
   );
 };

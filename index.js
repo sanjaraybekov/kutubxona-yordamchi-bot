@@ -1,9 +1,5 @@
-const { Telegraf } = require("telegraf");
-const { getLocation } = require("./methods/getLocation");
-const { getSearchBooks } = require("./methods/getSearchBooks");
+const { bot } = require("./constants/const");
 const { answerQuestions } = require("./questions/answerQuestions");
-
-const bot = new Telegraf("5109211047:AAHPrVD4aDfngl6UrIcI8n-oTxyJHgMNYvc");
 
 bot
   .start((ctx) => {
